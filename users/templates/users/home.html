@@ -9,7 +9,7 @@
     </style>
   </head>
   <body>
-    <h1>Hello</h1>
+    <h1>Hello, {{ user.username|default:'Guest' }}</h1>
 
     <p> Welcome to the Our site</p>
     <div>
@@ -18,7 +18,7 @@
 
       {% else %}
       <a href="{% url 'login'%}">Login</a>
-      
+
       {% endif %}
     </div>
   </body>
